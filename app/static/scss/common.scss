@@ -1,0 +1,14 @@
+@import './reset.scss';
+@import './font.scss';
+
+.l-clearfix:after {
+    display: table;
+    content: '';
+    clear: both;
+}
+.l-left {
+    float: left;
+}
+.l-right {
+    float: right;
+}

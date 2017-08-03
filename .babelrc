@@ -1,0 +1,19 @@
+{
+    "presets": [
+        "react",
+        [
+            "env",
+            {
+                "targets": {
+                    "browsers": [
+                        "last 3 versions"
+                    ]
+                }
+            }
+        ]
+    ],
+    "plugins": [
+        "transform-object-rest-spread",
+        "react-html-attrs"
+    ]
+}
