@@ -1,0 +1,21 @@
+.home-recommend {
+    margin-top: 20px;
+    background-color: #fff;
+    h3 {
+        font-size: 18px;
+        border-bottom: 1px solid #eee;
+        padding: 10px;
+    }
+    ul {
+        padding: 10px;
+        font-size: 0;
+        li {
+            width: 33.3%;
+            display: inline-block;
+            padding: 5px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

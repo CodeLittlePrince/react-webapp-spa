@@ -16,8 +16,10 @@ app.use(router.allowedMethods({
 const bodyParser = require('koa-bodyparser');
 app.use(bodyParser());
 
-router.get('/api/kitty', async (ctx, next) => {
-    ctx.body = {name:'kitty', age:7};
+// 首页数据
+const recoData = require('./Home/reco.js');
+router.get('/api/home/reco', async (ctx, next) => {
+    ctx.body = recoData;
 });
 
 // log error

@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.scss';
-import PropType from 'prop-types';
+import PropTypes from 'prop-types';
 
 class HomeHeader extends React.PureComponent {
     render() {
@@ -23,8 +23,8 @@ class HomeHeader extends React.PureComponent {
     }
 }
 
-HomeHeader.propType = {
-    cityName: PropType.string
+HomeHeader.propTypes = {
+    cityName: PropTypes.string
 };
 
 HomeHeader.defaultProps = {

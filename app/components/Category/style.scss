@@ -1,10 +1,12 @@
 .home-category {
     padding: 10px;
+    background-color: #fff;
     .items {
         width: 100%;
         height: auto;
         text-align: center;
         font-size: 0;
+        color: #111;
         li {
             display: inline-block;
             font-size: 16px;
@@ -12,7 +14,7 @@
             padding-top: 15px;
             i {
                 font-size: 24px;
-                color: rgb(233, 32, 61);
+                color: #099;
             }
             p {
                 margin-top: 10px;
@@ -33,7 +35,7 @@
             background-color: #ccc;
             margin: 0 3px;
             &.active {
-                background-color: rgb(233, 32, 61);
+                background-color: #099;
             }
         }
     }

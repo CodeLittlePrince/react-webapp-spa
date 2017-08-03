@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=dev webpack-dev-server --progress --colors --host 192.168.2.132 --port 8888 --open",
+    "dev": "NODE_ENV=dev webpack-dev-server --progress --colors --host 192.168.2.132 --port 8888 --open",
     "build": "NODE_ENV=production webpack -p --config ./webpack.config.production.js --progress --colors",
     "mock": "node ./mock/server.js"
   },
