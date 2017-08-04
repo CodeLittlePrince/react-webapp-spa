@@ -1,14 +1,17 @@
 import './style.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 class HomeHeader extends React.PureComponent {
     render() {
         return (
             <header class="home-header l-clearfix">
-                <div class="l-left location">
-                    {this.props.cityName}<i class="icon-arrow-down"></i>
-                </div>
+                <Link to="/city">
+                    <div class="l-left location">
+                        {this.props.cityName}<i class="icon-arrow-down"></i>
+                    </div>
+                </Link>
                 <div class="l-right user">
                     <i class="icon-user"></i>
                 </div>

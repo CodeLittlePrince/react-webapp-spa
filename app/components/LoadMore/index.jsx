@@ -48,9 +48,14 @@ class LoadMore extends React.PureComponent {
         }
     }
 
-    componentDidMount() {     
+    componentDidMount() {
         this._loadMore();
     }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', handlerID);
+    }
+    
     
     render() {
         let text;

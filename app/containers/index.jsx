@@ -1,11 +1,11 @@
 import 'static/scss/common.scss';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import get from 'fetch/get';
 import LocalStorage from 'util/localStorage';
 import { CITYNAME } from 'config/localStorageKey';
 import * as userInfoActions from 'actions/userinfo';
-import { connect } from 'react-redux';
 
 class App extends React.Component {
     constructor(props) {
@@ -63,4 +63,4 @@ const mapDispatchToProps = dispatch => {
 	}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
