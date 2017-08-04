@@ -44,7 +44,6 @@ class App extends React.Component {
                     ? this.props.children
                     : <div>加载中...</div>
                 }
-                <footer>footer</footer>
             </div>
         );
     }

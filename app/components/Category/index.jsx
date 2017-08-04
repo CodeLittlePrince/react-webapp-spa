@@ -1,6 +1,6 @@
+import './style.scss';
 import React from 'react';
 import ReactSwipe from 'react-swipe';
-import './style.scss';
 
 class Category extends React.PureComponent {
     constructor(props) {
@@ -30,7 +30,7 @@ class Category extends React.PureComponent {
                         </li>
                         <li>
                             <div><i class="icon-baobao"></i></div>
-                            <p>宝宝</p>
+                            <p>包包</p>
                         </li>
                         <li>
                             <div><i class="icon-xiezi"></i></div>

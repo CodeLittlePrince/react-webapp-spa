@@ -1,8 +1,11 @@
+import './subPage/style.scss';
 import React from 'react';
 import { connect } from 'react-redux';
 import HomeHeader from 'components/HomeHeader';
 import Category from 'components/Category';
 import Reco from './subPage/Reco';
+import GuessInterest from './subPage/GuessInterest';
+
 class Home extends React.PureComponent {
     render() {
         return (
@@ -12,6 +15,7 @@ class Home extends React.PureComponent {
                 <HomeHeader cityName={this.props.cityName} />
                 <Category />
                 <Reco />
+                <GuessInterest />
             </div>
         );
     }

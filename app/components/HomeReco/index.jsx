@@ -1,14 +1,14 @@
+import './style.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
-import './style.scss';
 
 class HomeReco extends React.PureComponent {
     render() {
         return (
             <div class="home-recommend">
-                <h3>半次元制品周边推荐</h3>
+                <h3>{this.props.title}</h3>
                 <ul>
-                    {this.props.recoData.map((item, index) => {
+                    {this.props.data.map((item, index) => {
                         return (
                             <li key={index}>
                                 <a href={item.link}>
@@ -25,10 +25,12 @@ class HomeReco extends React.PureComponent {
 }
 
 HomeReco.propTypes = {
+    title: PropTypes.string,
     recoData: PropTypes.array
 };
 
 HomeReco.defaultProps = {
+    title: '',
     recoData: []
 };
 

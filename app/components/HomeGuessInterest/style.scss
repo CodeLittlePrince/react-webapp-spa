@@ -1,0 +1,68 @@
+.home-guessInterest {
+    background-color: #fff;
+    h3 {
+        font-size: 18px;
+        border-bottom: 1px solid #eee;
+        padding: 10px;
+    }
+
+    ul {
+        padding: 10px 10px 0;
+        li {
+            padding: 5px;
+            border-bottom: 1px solid #f1f1f1;
+            &:after {
+                display: table;
+                content: '';
+                clear: both;
+            }
+            a {
+                color: #333;
+            }
+            .left {
+                margin-right: 10px;
+                float: left;
+                width: 120px;
+                img {
+                    width: 100%;
+                }
+                line-height: 1;
+            }
+            .right {
+                .head {
+                    height: 24px;
+                    &:after {
+                        display: table;
+                        content: '';
+                        clear: both;
+                    }
+                    h4 {
+                        max-width: 40%;
+                        float: left;
+                        font-size: 16px;
+                        line-height: 1.2;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        word-wrap: normal;
+                    }
+                    span {
+                        float: right;
+                        font-size: 12px;
+                        line-height: 16px;
+                    }
+                }
+                .desc {
+                    font-size: 14px;
+                    line-height: 1.4;
+                }
+                .price {
+                    margin-top: 5px;
+                    color: #ff6fa2;
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
