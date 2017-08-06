@@ -1,0 +1,21 @@
+.searchInput {
+    .search {
+        background-color: #fff;
+        border-radius: 15px;
+        overflow: hidden;
+        padding: 5px 10px;
+        i {
+            font-size: 16px;
+            color: #ccc;
+            vertical-align: middle;
+        }
+        input {
+            width: 90%;
+            padding-left: 5px;
+            font-size: 14px;
+            outline: none;
+            border: none;
+            font-weight: normal;
+        }
+    }
+}

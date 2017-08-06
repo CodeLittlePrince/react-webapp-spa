@@ -1,13 +1,12 @@
+import './style.scss';
 import React from 'react';
 import Item from './Item';
 import PropTypes from 'prop-types';
-import './style.scss';
 
-class HomeGuessInterest extends React.PureComponent {
+class GoodsList extends React.PureComponent {
     render() {
         return (
-            <div class="home-guessInterest">
-                <h3>{this.props.title}</h3>
+            <div class="goodsList">
                 <ul>
                     {
                         this.props.data.map((item, index) => {
@@ -20,12 +19,12 @@ class HomeGuessInterest extends React.PureComponent {
     }
 }
 
-HomeGuessInterest.propTypes = {
+GoodsList.propTypes = {
     data: PropTypes.array
 };
 
-HomeGuessInterest.defaultProps = {
+GoodsList.defaultProps = {
     data: []
 };
 
-export default HomeGuessInterest;
+export default GoodsList;

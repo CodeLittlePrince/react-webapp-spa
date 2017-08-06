@@ -5,5 +5,8 @@ export function getRecoData() {
 }
 
 export function getGuessInterestData(city, page) {
-    return get('api/home/guessInterest/' + encodeURIComponent(city) + '/' + page);
+    return get('api/home/guessInterest/'
+        + encodeURIComponent(city)
+        + '/'
+        + page);
 }

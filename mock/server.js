@@ -40,6 +40,38 @@ router.get('/api/home/guessInterest/:city/:page', async(ctx, next) => {
         guessData.hasMore = false;
     }
     ctx.body = guessData;
+    await next();
+});
+
+// 搜索结果页数据 【无关键字】
+const searchListData1 = require('./Search/searchList.js');
+router.get('/api/search/searchList/:city/:page/:category', async (ctx, next) => {
+    console.log('当前城市：' + ctx.params.city);
+    console.log('当前页码：' + ctx.params.page);
+    console.log('当前类别：' + ctx.params.category);
+    // 假设请求page5就没有更多了
+    searchListData1.hasMore = true;
+    if (ctx.params.page == 5) {
+        searchListData1.hasMore = false;
+    }
+    ctx.body = searchListData1;
+    await next();
+});
+
+// 搜索结果页数据 【有关键字】
+const searchListData2 = require('./Search/searchList.js');
+router.get('/api/search/searchList/:city/:page/:category/:keywords', async (ctx, next) => {
+    console.log('当前城市：' + ctx.params.city);
+    console.log('当前页码：' + ctx.params.page);
+    console.log('当前类别：' + ctx.params.category);
+    console.log('当前关键字：' + ctx.params.keywords);
+    // 假设请求page5就没有更多了
+    searchListData2.hasMore = true;
+    if (ctx.params.page == 5) {
+        searchListData2.hasMore = false;
+    }
+    ctx.body = searchListData2;
+    await next();
 });
 
 // log error

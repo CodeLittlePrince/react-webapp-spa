@@ -14,7 +14,7 @@ class Header extends React.PureComponent {
         return (
             <div class="header">
                 <i class="icon-arrow-left" onClick={this.clickHandler.bind(this)}></i>
-                {this.props.title}
+                {this.props.children}
             </div>
         );
     }

@@ -1,24 +1,14 @@
 .home-category {
-    padding: 10px;
-    background-color: #fff;
+    background-color: #333;
+    padding-bottom: 10px;
     .items {
         width: 100%;
         height: auto;
         text-align: center;
         font-size: 0;
         color: #111;
-        li {
-            display: inline-block;
-            font-size: 16px;
-            width: 20%;
-            padding-top: 15px;
-            i {
-                font-size: 26px;
-                color: #ff6fa2;
-            }
-            p {
-                margin-top: 10px;
-            }
+        img {
+            width: 100%;
         }
     }
     .index{
@@ -32,7 +22,7 @@
             height: 8px;
             width: 8px;
             border-radius: 4px;
-            background-color: #ccc;
+            background-color: #fff;
             margin: 0 3px;
             &.active {
                 background-color: #ff6fa2;

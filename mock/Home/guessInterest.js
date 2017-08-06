@@ -3,7 +3,7 @@ module.exports = {
     data: [
         {
             title: '干物妹小埋手机壳',
-            img: 'http://ou41niivx.bkt.clouddn.com/interest-1.png?imageView2/2/w/320',
+            img: 'http://ou41niivx.bkt.clouddn.com/interest-1.png?imageView2/2/w/200',
             price: '38.00',
             created: '2017-2-22',
             link: 'https://bcy.net/zhipin/detail/1020',
@@ -11,7 +11,7 @@ module.exports = {
         },
         {
             title: '唯美插画书签',
-            img: 'http://ou41niivx.bkt.clouddn.com/interest-2.png?imageView2/2/w/320',
+            img: 'http://ou41niivx.bkt.clouddn.com/interest-2.png?imageView2/2/w/200',
             price: '38.00',
             created: '2017-2-20',
             link: 'https://bcy.net/zhipin/detail/8080',
@@ -19,7 +19,7 @@ module.exports = {
         },
         {
             title: 'MogGen-猫将徽章套装（4个/套）',
-            img: 'http://ou41niivx.bkt.clouddn.com/interest-3.png?imageView2/2/w/320',
+            img: 'http://ou41niivx.bkt.clouddn.com/interest-3.png?imageView2/2/w/200',
             price: '28.00',
             created: '2017-1-22',
             link: 'https://bcy.net/zhipin/detail/8030',
@@ -27,7 +27,7 @@ module.exports = {
         },
         {
             title: '埃罗芒阿老师等身抱枕',
-            img: 'http://ou41niivx.bkt.clouddn.com/interest-4.png?imageView2/2/w/320',
+            img: 'http://ou41niivx.bkt.clouddn.com/interest-4.png?imageView2/2/w/200',
             price: '168.00',
             created: '2017-1-18',
             link: 'https://bcy.net/zhipin/detail/8338',
@@ -35,7 +35,7 @@ module.exports = {
         },
         {
             title: '神烦催更超大鼠标垫-绘师款',
-            img: 'http://ou41niivx.bkt.clouddn.com/interest-5.png?imageView2/2/w/320',
+            img: 'http://ou41niivx.bkt.clouddn.com/interest-5.png?imageView2/2/w/200',
             price: '58.00',
             created: '2017-1-17',
             link: 'https://bcy.net/zhipin/detail/2031',

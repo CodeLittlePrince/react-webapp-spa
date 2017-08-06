@@ -19,8 +19,8 @@ class RouteMap extends React.Component {
                     <Switch>
                         <Route path="/" exact component={Home} />
                         <Route path="/city" component={City} />
+                        <Route path="/search/:category/:keywords?" component={Search} />
                         <Route path="/detail/:id" component={Detail} />
-                        <Route path="/todo" component={Search} />
                         <Route path="/user" component={User} />
                         <Route component={NotFound} />
                     </Switch>

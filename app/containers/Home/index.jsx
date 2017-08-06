@@ -10,7 +10,7 @@ class Home extends React.PureComponent {
     render() {
         return (
             <div>
-                <HomeHeader cityName={this.props.cityName} />
+                <HomeHeader cityName={this.props.cityName} history={this.props.history}/>
                 <Category />
                 <Reco />
                 <GuessInterest />

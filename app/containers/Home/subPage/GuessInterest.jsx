@@ -1,7 +1,7 @@
 import React from 'react';
 import { getGuessInterestData } from 'fetch/Home';
 import { connect } from 'react-redux';
-import HomeGuessInterest from 'components/HomeGuessInterest';
+import GoodsList from 'components/GoodsList';
 import LoadMore from 'components/LoadMore';
 
 class GuessInterest extends React.PureComponent {
@@ -19,15 +19,33 @@ class GuessInterest extends React.PureComponent {
      * 获取猜你喜欢的数据，并更新state
      */
     _getGuessInterestData() {
+        // 记录状态
+        this.setState({
+            isLoading: true
+        })
+        // 获取数据
         let city = this.props.cityName;
         let page = this.state.page;
-        getGuessInterestData(city, page)
-        .then(res => {
+        let result = getGuessInterestData(city, page)
+        this._processResult(result);
+        // 更新状态
+        this.setState({
+            isLoading: false
+        })
+    }
+
+    _processResult(result) {
+        // 增加 page 计数
+        const page = this.state.page;
+        this.setState({
+            page: page + 1
+        })
+        // 处理 fetch返回结果
+        result.then(res => {
             return res.json();
         })
         .then(json => {
             this.setState({
-                page: page + 1,
                 hasMore: json.hasMore,
                 data: this.state.data.concat(json.data)
             });
@@ -36,7 +54,7 @@ class GuessInterest extends React.PureComponent {
             if (__DEV__) {
                 console.error('主页获取猜你喜欢数据出错：', ex.message);
             }
-        })
+        });
     }
 
     componentDidMount() {
@@ -50,8 +68,9 @@ class GuessInterest extends React.PureComponent {
     
     render() {
         return (
-            <div>
-                <HomeGuessInterest data={this.state.data} title="猜你喜欢" />
+            <div class="home-guessInterest">
+                <h3>猜你喜欢</h3>
+                <GoodsList data={this.state.data} />
                 <LoadMore hasMore={this.state.hasMore}
                           isLoading={this.state.isLoading}
                           onLoadMore={this.loadMoreHandler.bind(this)}/>

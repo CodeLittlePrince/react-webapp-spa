@@ -1,3 +1,13 @@
-.home-recommend, .home-guessInterest {
+.home-recommend {
     margin-top: 15px;
+}
+
+.home-guessInterest {
+    margin-top: 15px;
+    h3 {
+        background-color: #fff;
+        font-size: 18px;
+        border-bottom: 1px solid #eee;
+        padding: 10px;
+    }
 }

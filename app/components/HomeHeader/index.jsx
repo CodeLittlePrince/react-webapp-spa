@@ -2,8 +2,14 @@ import './style.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import SearchInput from 'components/SearchInput';
 
 class HomeHeader extends React.PureComponent {
+
+    submitHandler(keywords) {
+        this.props.history.push('/search/' + 'all/' +  encodeURIComponent(keywords))
+    }
+
     render() {
         return (
             <header class="home-header l-clearfix">
@@ -15,12 +21,7 @@ class HomeHeader extends React.PureComponent {
                 <div class="l-right user">
                     <i class="icon-user"></i>
                 </div>
-                <div class="searchBox">
-                    <div class="search">
-                        <i className="icon-search"></i>
-                        <input type="text" placeholder="请输入关键字..."/>
-                    </div>
-                </div>
+                <SearchInput class="searchInput" onSubmit={this.submitHandler.bind(this)} />
             </header>
         );
     }
