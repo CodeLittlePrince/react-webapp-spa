@@ -1,4 +1,4 @@
-import './style.scss';
+import './style';
 import React from 'react';
 import ReactSwipe from 'react-swipe';
 

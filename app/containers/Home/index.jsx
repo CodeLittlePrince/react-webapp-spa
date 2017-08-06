@@ -1,4 +1,4 @@
-import './subPage/style.scss';
+import './subPage/style';
 import React from 'react';
 import { connect } from 'react-redux';
 import HomeHeader from 'components/HomeHeader';

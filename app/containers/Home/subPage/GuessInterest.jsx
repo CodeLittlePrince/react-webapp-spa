@@ -51,6 +51,7 @@ class GuessInterest extends React.PureComponent {
             });
         })
         .catch(ex => {
+            /*global __DEV__*/
             if (__DEV__) {
                 console.error('主页获取猜你喜欢数据出错：', ex.message);
             }

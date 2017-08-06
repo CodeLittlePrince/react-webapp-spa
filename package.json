@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=dev webpack-dev-server --progress --colors --host 192.168.2.132 --port 8888 --open",
-    "build": "NODE_ENV=production webpack -p --config ./webpack.config.production.js --progress --colors",
-    "mock": "node ./mock/server.js"
+    "mock": "node ./mock/server.js",
+    "dev": "NODE_ENV=dev webpack-dev-server --progress --colors --open",
+    "build": "NODE_ENV=production webpack -p --config ./webpack.config.production.js --progress --colors"
   },
   "author": "Luozi",
   "license": "ISC",

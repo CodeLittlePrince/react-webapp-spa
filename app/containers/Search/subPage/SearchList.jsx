@@ -54,6 +54,7 @@ class SearchList extends React.PureComponent {
             });
         })
         .catch(ex => {
+            /*global __DEV__*/
             if (__DEV__) {
                 console.error('搜索页获取搜索列表数据出错：', ex.message);
             }

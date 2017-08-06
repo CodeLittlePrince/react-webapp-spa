@@ -1,3 +1,4 @@
+/*global __DEV__ __dirname*/
 const webpack = require('webpack');
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -44,13 +45,13 @@ module.exports = {
             {
                 test: /\.(jpg|jpeg|png|svg|gif|bmp)/i,
                 use: [
-                    'url-loader?limit=5000&name=img/[name].[chunkhash:8].[ext]'
+                    'url-loader?limit=5000&name=img/[name].[sha512:hash:base64:8].[ext]'
                 ]
             },
             {
                 test: /\.(woff|woff2|ttf|eot)($|\?)/i,
                 use: [
-                    'url-loader?limit=5000&name=fonts/[name].[chunkhash:8].[ext]'
+                    'url-loader?limit=5000&name=fonts/[name].[sha512:hash:base64:8].[ext]'
                 ]
             },
             {

@@ -1,4 +1,4 @@
-import './style.scss';
+import './style';
 import React from 'react';
 
 class CurrentCity extends React.PureComponent {

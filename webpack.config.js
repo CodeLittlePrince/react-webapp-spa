@@ -1,3 +1,4 @@
+/*global __DEV__ __dirname*/
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -101,6 +102,9 @@ module.exports = {
                 secure: false
             }
         },
+        host: '0.0.0.0',
+        port: '8888',
+        disableHostCheck: true, // 为了手机可以访问
         contentBase: './public', // 本地服务器所加载的页面所在的目录
         historyApiFallback: true, // 为了SPA应用服务
         inline: true, //实时刷新

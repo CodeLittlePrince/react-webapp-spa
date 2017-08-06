@@ -24,6 +24,7 @@ class AD extends React.PureComponent {
             });
         })
         .catch(ex => {
+            /*global __DEV__*/
             if (__DEV__) {
                 // 虽然这个项目中数据是前端定的，几乎不可能报错
                 // 但是，如果proxy到线下后端的服务器拿模拟数据，就会可能出现数据结构不符等问题

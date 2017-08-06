@@ -5,7 +5,7 @@ export function getSearchListData(city, page, category, keywords) {
         + encodeURIComponent(city) + '/'
         + page + '/'
         + encodeURIComponent(category);
-    if (!!keywords) {
+    if (keywords) {
         url += '/' + encodeURIComponent(keywords);
     }
     return get(url);

@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 import get from 'fetch/get';
 import LocalStorage from 'util/localStorage';
 import { CITYNAME } from 'config/localStorageKey';
-import * as userInfoActions from 'actions/userinfo';
+import * as userInfoActions from 'actions/userInfo';
 
 class App extends React.Component {
     constructor(props) {

@@ -8,9 +8,8 @@ export default {
             if (__DEV__) {
                 console.error('localStorage.getItem报错, ', ex.message)
             }
-        } finally {
-            return value;
         }
+        return value;
     },
     setItem: (key, value) => {
         try {
@@ -18,6 +17,7 @@ export default {
             localStorage.setItem(key, value)
         } catch (ex) {
             // 开发环境下提示 error
+            /*global __DEV__*/
             if (__DEV__) {
                 console.error('localStorage.setItem报错, ', ex.message)
             }
