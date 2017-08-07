@@ -10,7 +10,7 @@
 1. scope hosting
 
 #### 之后要做：
-1. SSR首屏渲染，为了SEO和防止首页白屏
+1. SSR，为了SEO和防止一开始白屏
 1. 移植项目到react-naive
 1. 发布几篇详细的文章
 
