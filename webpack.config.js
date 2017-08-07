@@ -79,6 +79,8 @@ module.exports = {
         ]
     },
     plugins: [
+        // Scope hosting
+        new webpack.optimize.ModuleConcatenationPlugin(),
         new ExtractTextPlugin({
             filename: '[name].css',
             disable: true

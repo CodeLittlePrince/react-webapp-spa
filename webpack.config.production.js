@@ -85,6 +85,8 @@ module.exports = {
         ]
     },
     plugins: [
+        // Scope hosting
+        new webpack.optimize.ModuleConcatenationPlugin(),
         // 删除build文件夹
         new CleanWebpackPlugin('./build'),
         // 加署名
