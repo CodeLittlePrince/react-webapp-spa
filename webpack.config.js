@@ -8,7 +8,7 @@ module.exports = {
     devtool: 'cheap-module-eval-source-map',
     entry: path.resolve(__dirname, 'app/index.jsx'),
     output: {
-        path: __dirname + '/build',
+        path: __dirname + '/dev',
         filename: 'bundle.js'
     },
     resolve: {
@@ -31,7 +31,9 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: [
-                    'babel-loader'
+                    'react-hot-loader',
+                    'babel-loader',
+                    'eslint-loader'
                 ]
             },
             {
@@ -105,7 +107,7 @@ module.exports = {
         host: '0.0.0.0',
         port: '8888',
         disableHostCheck: true, // 为了手机可以访问
-        contentBase: './public', // 本地服务器所加载的页面所在的目录
+        contentBase: './dev', // 本地服务器所加载的页面所在的目录
         historyApiFallback: true, // 为了SPA应用服务
         inline: true, //实时刷新
         hot: true  // 使用热加载插件 HotModuleReplacementPlugin
