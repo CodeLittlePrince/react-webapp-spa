@@ -7,6 +7,7 @@
 1. react + react-redux + react-router v4 实现页面首页、城市页、搜索结果页、轮播图、下拉加载更多、搜索等功能。
 1. react 热更新
 1. 使用dynamic import将JS按页面代码分离，加速了首屏显示
+1. scope hosting
 
 #### 之后要做：
 1. SSR首屏渲染，为了SEO和防止首页白屏
