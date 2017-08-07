@@ -14,6 +14,7 @@
     ],
     "plugins": [
         "transform-object-rest-spread",
-        "react-html-attrs"
+        "react-html-attrs",
+        "babel-plugin-dynamic-import-webpack"
     ]
 }
