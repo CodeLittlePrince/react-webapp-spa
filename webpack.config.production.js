@@ -1,4 +1,8 @@
-/*global __DEV__ __dirname*/
+/*global
+    __DEV__
+    __dirname
+    process
+*/
 const webpack = require('webpack');
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');

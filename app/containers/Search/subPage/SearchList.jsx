@@ -4,16 +4,15 @@ import { connect } from 'react-redux';
 import GoodsList from 'components/GoodsList';
 import LoadMore from 'components/LoadMore';
 
-const initState = {
-    data: [],
-    page: 0,
-    hasMore: true,
-    isLoading: false
-};
 class SearchList extends React.PureComponent {
     constructor(props) {
         super(props);
-        this.state = initState;
+        this.state = {
+            data: [],
+            page: 0,
+            hasMore: true,
+            isLoading: false
+        };
     }
 
     /**
@@ -62,18 +61,6 @@ class SearchList extends React.PureComponent {
     }
 
     componentDidMount() {
-        this._getSearchListData();
-    }
-    
-    componentDidUpdate(prevProps, prevState) {
-        const category = this.props.category,
-              keywords = this.props.keywords;
-        // 如果props和上一次的一样，则不重新初始化 (我的妈，这句不加会栈溢出)
-        if (category === prevProps.category && keywords === prevProps.keywords) {
-            return;
-        }
-        // 初始化和重新获取数据
-        this.setState(initState);
         this._getSearchListData();
     }
     

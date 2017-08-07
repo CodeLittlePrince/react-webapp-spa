@@ -57,11 +57,16 @@ class RouteMap extends React.Component {
                         <Route path="/search/:category/:keywords?" component={AsyncSearch} />
                         <Route path="/detail/:id" component={AsyncDetail} />
                         <Route path="/user" component={AsyncUser} />
+                        <Route path="/empty" component={null} key="empty" />
                         <Route component={AsyncNotFound} />
                     </Switch>
                 </App>
             </Router>
         );
+        // 说明
+        // empty Route
+        // https://github.com/ReactTraining/react-router/issues/1982  解决人：PFight
+        // 解决react-router v4改变查询参数并不会刷新或者说重载组件的问题 
     }
 }
 
