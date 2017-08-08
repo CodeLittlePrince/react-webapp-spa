@@ -49,7 +49,8 @@ module.exports = {
             {
                 test: /\.(jpg|jpeg|png|svg|gif|bmp)/i,
                 use: [
-                    'url-loader?limit=5000&name=img/[name].[sha512:hash:base64:8].[ext]'
+                    'url-loader?limit=5000&name=img/[name].[sha512:hash:base64:8].[ext]',
+                    'image-webpack-loader?{pngquant:{quality: "65-90", speed: 4}, mozjpeg: {quality: 65}}'
                 ]
             },
             {

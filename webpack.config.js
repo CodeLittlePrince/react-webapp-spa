@@ -86,7 +86,7 @@ module.exports = {
         // Scope hosting
         new webpack.optimize.ModuleConcatenationPlugin(),
         new ExtractTextPlugin({
-            filename: '[name].css',
+            filename: 'main.css',
             disable: true
         }),
         // html 模板插件
