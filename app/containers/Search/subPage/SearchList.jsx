@@ -30,10 +30,6 @@ class SearchList extends React.PureComponent {
             keywords = this.props.keywords;
         let result = getSearchListData(city, page, category, keywords)
         this._processResult(result);
-        // 更新状态
-        this.setState({
-            isLoading: false
-        });
     }
 
     _processResult(result) {
@@ -51,12 +47,20 @@ class SearchList extends React.PureComponent {
                 hasMore: json.hasMore,
                 data: this.state.data.concat(json.data)
             });
+            // 更新状态
+            this.setState({
+                isLoading: false
+            });
         })
         .catch(ex => {
             /*global __DEV__*/
             if (__DEV__) {
                 console.error('搜索页获取搜索列表数据出错：', ex.message);
             }
+            // 更新状态
+            this.setState({
+                isLoading: false
+            });
         });
     }
 

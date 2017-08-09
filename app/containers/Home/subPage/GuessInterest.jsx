@@ -26,12 +26,8 @@ class GuessInterest extends React.PureComponent {
         // 获取数据
         let city = this.props.cityName;
         let page = this.state.page;
-        let result = getGuessInterestData(city, page)
+        let result = getGuessInterestData(city, page);
         this._processResult(result);
-        // 更新状态
-        this.setState({
-            isLoading: false
-        })
     }
 
     _processResult(result) {
@@ -49,12 +45,20 @@ class GuessInterest extends React.PureComponent {
                 hasMore: json.hasMore,
                 data: this.state.data.concat(json.data)
             });
+            // 更新状态
+            this.setState({
+                isLoading: false
+            });
         })
         .catch(ex => {
             /*global __DEV__*/
             if (__DEV__) {
                 console.error('主页获取猜你喜欢数据出错：', ex.message);
             }
+            // 更新状态
+            this.setState({
+                isLoading: false
+            });
         });
     }
 
