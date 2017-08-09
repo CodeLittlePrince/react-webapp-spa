@@ -17,9 +17,8 @@ class SearchInput extends React.PureComponent {
 
     // 输入回车后，submit
     keyUpHandler(e) {
-        if (e.keyCode === 13) {
-            this.props.onSubmit(this.state.value);
-        }
+        e.preventDefault();
+        this.props.onSubmit(this.state.value);
     }
 
     // 受控组件处理
@@ -33,13 +32,14 @@ class SearchInput extends React.PureComponent {
     render() {
         return (
             <div class="searchInput" onClick={this.clickHandler.bind(this)}>
-                <div class="search">
-                    <i className="icon-search"></i>
-                    <input type="text" placeholder="请输入关键字..." ref="input"
-                        value={this.state.value}
-                        onChange={this.changeHandler.bind(this)}
-                        onKeyUp={this.keyUpHandler.bind(this)}/>
-                </div>
+                <form action="#" onSubmit={this.keyUpHandler.bind(this)}>
+                    <div class="search">
+                        <i className="icon-search"></i>
+                        <input type="search" placeholder="请输入关键字..." ref="input"
+                            value={this.state.value}
+                            onChange={this.changeHandler.bind(this)}/>
+                    </div>
+                </form>
             </div>
         );
     }
