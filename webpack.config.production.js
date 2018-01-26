@@ -13,27 +13,27 @@ const pkg = require('./package.json');
 module.exports = {
     devtool: 'cheap-module-source-map',
     entry: {
-        app: path.resolve(__dirname, 'app/index.jsx'),
+        app: path.join(__dirname, 'app/index.jsx'),
         // 将第三方依赖（node_modules）的库打包
         vendor: Object.keys(pkg.dependencies)
     },
     output: {
-        path: __dirname + '/build',
-        publicPath: '/',
+        path: path.join(__dirname, 'build'),
+        publicPath: path.join(__dirname, 'build/'),
         filename: 'js/[name].[chunkhash:8].js'
     },
     resolve: {
         extensions: ['.js', '.jsx', '.scss', '.css'],
         alias: {
-            components: path.resolve(__dirname, 'app/components/'),
-            containers: path.resolve(__dirname, 'app/containers/'),
-            constants: path.resolve(__dirname, 'app/constants/'),
-            actions: path.resolve(__dirname, 'app/actions/'),
-            reducers: path.resolve(__dirname, 'app/reducers/'),
-            util: path.resolve(__dirname, 'app/util/'),
-            fetch: path.resolve(__dirname, 'app/fetch/'),
-            config: path.resolve(__dirname, 'app/config/'),
-            static: path.resolve(__dirname, 'app/static/')
+            components: path.join(__dirname, 'app/components/'),
+            containers: path.join(__dirname, 'app/containers/'),
+            constants: path.join(__dirname, 'app/constants/'),
+            actions: path.join(__dirname, 'app/actions/'),
+            reducers: path.join(__dirname, 'app/reducers/'),
+            util: path.join(__dirname, 'app/util/'),
+            fetch: path.join(__dirname, 'app/fetch/'),
+            config: path.join(__dirname, 'app/config/'),
+            static: path.join(__dirname, 'app/static/')
         }
     },
     module: {

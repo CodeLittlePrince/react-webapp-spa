@@ -10,23 +10,23 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     devtool: 'cheap-module-eval-source-map',
-    entry: path.resolve(__dirname, 'app/index.jsx'),
+    entry: path.join(__dirname, 'app/index.jsx'),
     output: {
-        path: __dirname + '/dev',
+        path: path.join(__dirname, 'dev'),
         filename: 'bundle.js'
     },
     resolve: {
         extensions: ['.js', '.jsx', '.scss', '.css'],
         alias: {
-            components: path.resolve(__dirname, 'app/components/'),
-            containers: path.resolve(__dirname, 'app/containers/'),
-            constants: path.resolve(__dirname, 'app/constants/'),
-            actions: path.resolve(__dirname, 'app/actions/'),
-            reducers: path.resolve(__dirname, 'app/reducers/'),
-            util: path.resolve(__dirname, 'app/util/'),
-            fetch: path.resolve(__dirname, 'app/fetch/'),
-            config: path.resolve(__dirname, 'app/config/'),
-            static: path.resolve(__dirname, 'app/static/')
+            components: path.join(__dirname, 'app/components/'),
+            containers: path.join(__dirname, 'app/containers/'),
+            constants: path.join(__dirname, 'app/constants/'),
+            actions: path.join(__dirname, 'app/actions/'),
+            reducers: path.join(__dirname, 'app/reducers/'),
+            util: path.join(__dirname, 'app/util/'),
+            fetch: path.join(__dirname, 'app/fetch/'),
+            config: path.join(__dirname, 'app/config/'),
+            static: path.join(__dirname, 'app/static/')
         }
     },
     module: {

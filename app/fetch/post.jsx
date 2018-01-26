@@ -27,7 +27,7 @@ export default function post(url, paramsObj) {
         Credentials' Description:
         omit: Never send cookies. (default)
         same-origin: Send cookies if the URL is on the same origin as the calling script.
-        nclude: Always send cookies, even for cross- origin calls.
+        include: Always send cookies, even for cross- origin calls.
         */
         headers: {
             'Accept': 'application/json, text/plain, */*',
