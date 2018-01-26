@@ -1,3 +1,7 @@
+# 如何运行
+1. 开发环境：先运行npm run mock开启本地模拟数据，然后npm run dev
+1. 发布环境：运行npm run build
+
 # react-webapp-spa
 #### 目前已完成：
 1.  webpack v3 前端工程：dev、mock、build
