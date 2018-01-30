@@ -5,10 +5,13 @@
             "env",
             {
                 "targets": {
-                    "browsers": [
-                        "last 3 versions"
-                    ]
-                }
+                  "browsers": [
+                    "> 1%",
+                    "last 2 versions",
+                    "not ie <= 8"
+                  ]
+                },
+                "useBuiltIns": true
             }
         ]
     ],
